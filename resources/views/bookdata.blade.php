@@ -10,7 +10,7 @@
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
       <li><a href="#">Master Data</a></li>
-        <li class="active">Data Buku..</li>
+        <li class="active">Data Buku</li>
       </ol>
     </section>
 <!-- Main content -->
