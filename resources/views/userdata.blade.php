@@ -29,6 +29,7 @@
                 <th>Username</th>
                 <th>Gmail</th>
                 <th>Password</th>
+                <th>Id Pengguna</th>
                 <th>Last Login</th>
                 <th>Member Since</th>
               </tr>
@@ -36,6 +37,7 @@
                 <td>badgalriri</td>
                 <td>rihanna@gmail.com</td>
                 <td>han*****</td>
+                <td>0000023</td>
                 <td>28 September 2021</td>
                 <td>2 September 2021</td>
               </tr>
@@ -43,6 +45,7 @@
                 <td>mileycyrus</td>
                 <td>miley@gmail.com</td>
                 <td>mil*****</td>
+                <td>0000024</td>
                 <td>22 September 2021</td>
                 <td>2 September 2021</td>
               </tr>
@@ -50,6 +53,7 @@
                 <td>arianagrande</td>
                 <td>ariana@gmail.com</td>
                 <td>ari*****</td>
+                <td>0000025</td>
                 <td>20 September 2021</td>
                 <td>2 September 2021</td>
               </tr>
