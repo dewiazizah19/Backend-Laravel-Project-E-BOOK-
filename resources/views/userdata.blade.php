@@ -20,44 +20,47 @@
       <div class="col-md-12">
         <div class="box box-primary">
           <div class="box-header">
-            <i class="fa fa-edit"></i>
 
-            <h3 class="box-title">September 2021</h3>
-          </div>
+              <div class="card-tools">
+                <a href="#" class="btn btn-success">Tambah Data <i class="fas fa-plus-square"></i></a>
+              </div>
+
+          <div class="card-body">
             <table class="table table-bordered text-center">
               <tr>
-                <th>Username</th>
                 <th>Gmail</th>
-                <th>Password</th>
+                <th>Username</th>
                 <th>Id Pengguna</th>
+                <th>Password</th>
                 <th>Last Login</th>
                 <th>Member Since</th>
               </tr>
               <tr>
-                <td>badgalriri</td>
                 <td>rihanna@gmail.com</td>
-                <td>han*****</td>
+                <td>badgalriri</td>
                 <td>0000023</td>
+                <td>han*****</td>
                 <td>28 September 2021</td>
                 <td>2 September 2021</td>
               </tr>
               <tr>
-                <td>mileycyrus</td>
                 <td>miley@gmail.com</td>
-                <td>mil*****</td>
+                <td>mileycyrus</td>
                 <td>0000024</td>
+                <td>mil*****</td>
                 <td>22 September 2021</td>
                 <td>2 September 2021</td>
               </tr>
               <tr>
-                <td>arianagrande</td>
                 <td>ariana@gmail.com</td>
-                <td>ari*****</td>
+                <td>arianagrande</td>
                 <td>0000025</td>
+                <td>ari*****</td>
                 <td>20 September 2021</td>
                 <td>2 September 2021</td>
               </tr>
             </table>
+          </div>
           </div>
           <!-- /.box -->
         </div>

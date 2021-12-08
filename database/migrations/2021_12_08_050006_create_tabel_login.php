@@ -19,6 +19,7 @@ class CreateTabelLogin extends Migration
             $table->integer('id_pengguna');
             $table->string('password' ,50);
             $table->primary('email');
+            $table->timestamp('last_login');
         });
     }
 
