@@ -26,39 +26,26 @@
               </div>
 
           <div class="card-body">
-            <table class="table table-bordered text-center">
-              <tr>
-                <th>Gmail</th>
-                <th>Username</th>
-                <th>Id Pengguna</th>
-                <th>Password</th>
-                <th>Last Login</th>
-                <th>Member Since</th>
-              </tr>
-              <tr>
-                <td>rihanna@gmail.com</td>
-                <td>badgalriri</td>
-                <td>0000023</td>
-                <td>han*****</td>
-                <td>28 September 2021</td>
-                <td>2 September 2021</td>
-              </tr>
-              <tr>
-                <td>miley@gmail.com</td>
-                <td>mileycyrus</td>
-                <td>0000024</td>
-                <td>mil*****</td>
-                <td>22 September 2021</td>
-                <td>2 September 2021</td>
-              </tr>
-              <tr>
-                <td>ariana@gmail.com</td>
-                <td>arianagrande</td>
-                <td>0000025</td>
-                <td>ari*****</td>
-                <td>20 September 2021</td>
-                <td>2 September 2021</td>
-              </tr>
+            <table class="table table-hover">
+                <thead>
+                    <th>Email</th>
+                    <th>Username</th>
+                    <th>Id Pengguna</th>
+                    <th>Password</th>
+                    <th>Last Login</th>
+                </thead>
+                @foreach($data_user as $du)
+                    <tbody>
+                      <tr>
+                        <td>{{ $du->email }}</td>
+                        <td>{{ $du->username }}</td>
+                        <td>{{ $du->id_pengguna }}</td>
+                        <td>{{ $du->password }}</td>
+                        <td>{{ $du->last_login }}</td>
+                        <td><a href="#">Edit</a> - <a href="#">Hapus</a></td>
+                      </tr>
+                    </tbody>
+                  @endforeach
             </table>
           </div>
           </div>

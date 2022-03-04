@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\userdatacontroller;
 use App\Http\Controllers\viewcontroller;
 use Illuminate\Support\Facades\Route;
 
@@ -20,6 +21,6 @@ Route::get('/dashboard.html', [viewcontroller::class, 'dashboard']);
 
 Route::get('/transaksi.html', [viewcontroller::class, 'transaksi']);
 
-Route::get('/userdata.html', [viewcontroller::class, 'userdata']);
+Route::get('/userdata.html', [userdatacontroller::class, 'userdata']);
 
 Route::get('/bookdata.html', [viewcontroller::class, 'bookdata']);
