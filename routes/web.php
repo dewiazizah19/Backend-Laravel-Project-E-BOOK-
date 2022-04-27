@@ -21,6 +21,10 @@ Route::get('/dashboard.html', [viewcontroller::class, 'dashboard']);
 
 Route::get('/transaksi.html', [viewcontroller::class, 'transaksi']);
 
-Route::get('/userdata.html', [userdatacontroller::class, 'userdata']);
+Route::get('/userdata.html', [userdatacontroller::class, 'userdata'])->name('userdata');
 
 Route::get('/bookdata.html', [viewcontroller::class, 'bookdata']);
+
+Route::get('/input_userdata.html', [viewcontroller::class, 'input_userdata']);
+
+Route::post('/input_userdata/insert', [userdatacontroller::class, 'insert']);

@@ -27,4 +27,7 @@ class viewController extends Controller
         return view('bookdata');
     }
 
+    public function input_userdata(){
+        return view('input_userdata');
+    }
 }

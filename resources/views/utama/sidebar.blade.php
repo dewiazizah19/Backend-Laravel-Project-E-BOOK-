@@ -40,6 +40,13 @@
            <li class="{{ request()->is('bookdata.html') ? 'active' : '' }}"><a href="./bookdata.html"><i class="fa fa-circle-o"></i> Data Buku</a></li> 
           </ul>
         </li>
+        <li class="{{ request()->is('input_userdata.html') ? 'active' : '' }}">
+          <a href="input_userdata.html">
+            <i class="fa fa-table"></i> <span>Input Data</span>
+            <span class="pull-right-container">
+            </span>
+          </a>
+        </li>
       </ul>
     </section>
     <!-- /.sidebar -->
