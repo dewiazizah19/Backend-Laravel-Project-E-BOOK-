@@ -42,30 +42,10 @@
             </div>
 
             <div class="form-group">
-              <label>ID Pengguna</label>
-              <input name="id_pengguna" class="form-control" value="{{ old('id_pengguna') }}">
+              <label>Password</label>
+              <input name="password" class="form-control" value="{{ old('password') }}">
               <div class="text-danger">
-                @error('id_pengguna')
-                    {{ $message }}
-                @enderror
-              </div>
-          </div>
-
-            <div class="form-group">
-                <label>Password</label>
-                <input type="password" class="form-control" id="inputPassword3" value="{{ old('password') }}">
-                <div class="text-danger">
-                  @error('password')
-                      {{ $message }}
-                  @enderror
-                </div>
-            </div>
-
-            <div class="form-group">
-              <label>Last Login</label>
-              <input name="last_login" class="form-control" value="{{ old('last_login') }}">
-              <div class="text-danger">
-                @error('last_login')
+                @error('password')
                     {{ $message }}
                 @enderror
               </div>

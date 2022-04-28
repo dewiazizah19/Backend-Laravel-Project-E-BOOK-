@@ -26,7 +26,7 @@ class userdatacontroller extends Controller
 
     public function create()
     {
-        return view('input_userdata');
+        return view('input_userdata.html');
     }
 
     public function insert()
@@ -34,20 +34,22 @@ class userdatacontroller extends Controller
         Request()->validate([
             'email' => 'required|unique:tabel_login,email|max:255',
             'username' => 'required|min:5|max:50',
-            'id_pengguna' => 'required',
             'Password' => 'required|min:5|max:10',
-            'last_login' => 'required',
         ]);
 
         $data = [
             'email' => Request()->email,
             'username' => Request()->username,
-            'id_pengguna' => Request()->id_pengguna,
             'password' => Request()->password,
-            'last_login' => Request()->last_login,
         ];
 
         $this->UserdataModel->createdata($data);
-        return redirect()->route('userdata')->witd('pesan','Data Berhasil Di Tambahkan');
+        return redirect()->route('userdata')->with('pesan','Data Berhasil Di Tambahkan');
+    }
+
+    public function delete($id_pengguna)
+    {
+        $this->UserdataModel->deletedata($id_pengguna);
+        return redirect()->route('userdata')->with('pesan','Data Berhasil Di Hapus');
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\userdatacontroller;
+use App\Http\Controllers\bookdatacontroller;
 use App\Http\Controllers\viewcontroller;
 use Illuminate\Support\Facades\Route;
 
@@ -17,14 +18,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [viewcontroller::class, 'index']);
 
-Route::get('/dashboard.html', [viewcontroller::class, 'dashboard']);
+Route::get('/dashboard', [viewcontroller::class, 'dashboard']);
 
-Route::get('/transaksi.html', [viewcontroller::class, 'transaksi']);
+Route::get('/transaksi', [viewcontroller::class, 'transaksi']);
 
-Route::get('/userdata.html', [userdatacontroller::class, 'userdata'])->name('userdata');
+Route::get('/userdata', [userdatacontroller::class, 'userdata'])->name('userdata');
 
-Route::get('/bookdata.html', [viewcontroller::class, 'bookdata']);
+Route::get('/bookdata', [bookdatacontroller::class, 'bookdata']);
 
-Route::get('/input_userdata.html', [viewcontroller::class, 'input_userdata']);
+Route::get('/input_userdata', [viewcontroller::class, 'input_userdata']);
 
 Route::post('/input_userdata/insert', [userdatacontroller::class, 'insert']);
+
+Route::get('/userdata/delete/{id_pengguna}', [viewcontroller::class, 'delete']);

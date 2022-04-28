@@ -17,4 +17,11 @@ class UserdataModel extends Model
     {
         DB::table('tabel_login')->insert($data);
     }
+
+    public function deletedata ($id_pengguna)
+    {
+        DB::table('tabel_login')
+            ->where('id_pengguna', $id_pengguna)
+            ->delete();
+    }
 }

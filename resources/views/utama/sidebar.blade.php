@@ -19,8 +19,8 @@
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>
         </li>
-        <li class="{{ request()->is('transaksi.html') ? 'active' : '' }}">
-          <a href="transaksi.html">
+        <li class="{{ request()->is('transaksi') ? 'active' : '' }}">
+          <a href="transaksi">
             <i class="fa fa-table"></i> <span>Transaksi</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-green">4</small>
@@ -36,12 +36,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-           <li class="{{ request()->is('userdata.html') ? 'active' : '' }}"><a href="./userdata.html"><i class="fa fa-circle-o"></i> Data Pengguna</a></li> 
-           <li class="{{ request()->is('bookdata.html') ? 'active' : '' }}"><a href="./bookdata.html"><i class="fa fa-circle-o"></i> Data Buku</a></li> 
+           <li class="{{ request()->is('userdata') ? 'active' : '' }}"><a href="./userdata"><i class="fa fa-circle-o"></i> User Data</a></li> 
+           <li class="{{ request()->is('bookdata') ? 'active' : '' }}"><a href="./bookdata"><i class="fa fa-circle-o"></i> Book Data</a></li> 
           </ul>
         </li>
-        <li class="{{ request()->is('input_userdata.html') ? 'active' : '' }}">
-          <a href="input_userdata.html">
+        <li class="{{ request()->is('input_userdata') ? 'active' : '' }}">
+          <a href="input_userdata">
             <i class="fa fa-table"></i> <span>Input Data</span>
             <span class="pull-right-container">
             </span>
