@@ -25,6 +25,7 @@
           <th>Pengarang</th>
           <th>Penerbit</th>
           <th>Cover</th>
+          <th>Harga (Rp)</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -38,6 +39,7 @@
               <td>{{ $bd->pengarang }}</td>
               <td>{{ $bd->penerbit }}</td>
               <td><img src="{{ url('cover_buku/'.$bd->cover) }}"width="100px"></td>
+              <td>{{ $bd->harga }}</td>
               <td>
                 <a href="" class="btn btn-sm btn-warning">Edit</a>
                 <a href="" class="btn btn-sm btn-danger">Delete</a>

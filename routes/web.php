@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\userdatacontroller;
 use App\Http\Controllers\bookdatacontroller;
+use App\Http\Controllers\transaksicontroller;
 use App\Http\Controllers\viewcontroller;
 use Illuminate\Support\Facades\Route;
 
@@ -20,7 +21,7 @@ Route::get('/', [viewcontroller::class, 'index']);
 
 Route::get('/dashboard', [viewcontroller::class, 'dashboard']);
 
-Route::get('/transaksi', [viewcontroller::class, 'transaksi']);
+Route::get('/transaksi', [transaksicontroller::class, 'transaksi']);
 
 Route::get('/userdata', [userdatacontroller::class, 'userdata'])->name('userdata');
 
