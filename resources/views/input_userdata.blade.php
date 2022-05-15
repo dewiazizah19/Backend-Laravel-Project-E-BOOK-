@@ -15,7 +15,7 @@
 
   <!-- Main content -->
 <section class="content">
-  <form action="/input_userdata/insert" method="POST" enctype="multipart/form-data">
+  <form action="/input_userdata/insert" method="POST" >
     @csrf
 
     <div class="content">
@@ -53,7 +53,7 @@
 
             <br>
             <div class="form-group">
-              <button class="btn btn-primary btn-sm">Create</button>
+              <button type="submit" class="btn btn-primary btn-sm">Create</button>
             </div>
           </div>
       </div>

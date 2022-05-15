@@ -49,13 +49,34 @@
                         <td>{{ $tr->waktu_transaksi }}</td>
                         <td>
                           <a href="" class="btn btn-sm btn-warning">Edit</a>
-                          <a href="" class="btn btn-sm btn-danger">Delete</a>
+                          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete{{ $tr->id_transaksi }}">
+                            Delete
+                          </button>
                         </td>
                       </tr>
                   @endforeach
                 </tbody>
               </table>
             </div>
+
+  @foreach ($transaksi as $tr)
+  <div class="modal modal-danger fade" id="delete{{ $tr->id_transaksi }}">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">{{ $tr->id_transaksi }}</h4>
+        </div>
+        <div class="modal-body">
+          <p>Apakah Anda Yakin Ingin Menghapus Data Ini?&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">No</button>
+          <a href="/bookdata/delete/{{ $tr->id_transaksi }}" class="btn btn-outline">Yes</a>
+        </div>
+      </div>
+  @endforeach
             <!-- /.box-body -->
           </div>
           <!-- /.box -->

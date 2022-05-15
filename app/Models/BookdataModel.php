@@ -13,4 +13,10 @@ class BookdataModel extends Model
         return DB::table('tabel_buku')->get();
     }
 
+    public function deletedata ($id_buku)
+    {
+        DB::table('tabel_buku')
+            ->where('id_buku', $id_buku)
+            ->delete();
+    }
 }

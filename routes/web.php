@@ -29,6 +29,6 @@ Route::get('/bookdata', [bookdatacontroller::class, 'bookdata']);
 
 Route::get('/input_userdata', [viewcontroller::class, 'input_userdata']);
 
-Route::post('/input_userdata/insert', [userdatacontroller::class, 'insert']);
+Route::get('/input_userdata/insert', [userdatacontroller::class, 'insert'])->name('insert');
 
 Route::get('/userdata/delete/{id_pengguna}', [viewcontroller::class, 'delete']);

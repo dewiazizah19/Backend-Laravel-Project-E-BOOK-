@@ -24,4 +24,9 @@ class transaksicontroller extends Controller
         return view('transaksi', $transaksi);
     }
 
+    public function delete($id_transaksi)
+    {
+        $this->TransaksiModel->deletedata($id_transaksi);
+        return redirect()->route('bookdata')->with('pesan','Data Berhasil Di Hapus');
+    }
 }

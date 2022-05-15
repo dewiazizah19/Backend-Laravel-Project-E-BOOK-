@@ -14,12 +14,11 @@ class CreateTabelLogin extends Migration
     public function up()
     {
         Schema::create('tabel_login', function (Blueprint $table) {
+            $table->integer('id_pengguna');
             $table->string('email' ,255);
             $table->string('username' ,50);
-            $table->integer('id_pengguna');
             $table->string('password' ,50);
-            $table->primary('email');
-            $table->timestamp('last_login');
+            $table->primary('id_pengguna');
         });
     }
 

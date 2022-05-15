@@ -26,25 +26,18 @@ class userdatacontroller extends Controller
 
     public function create()
     {
-        return view('input_userdata.html');
+        return view('input_userdata');
     }
 
-    public function insert()
+    public function insert(Request $request)
     {
-        Request()->validate([
-            'email' => 'required|unique:tabel_login,email|max:255',
-            'username' => 'required|min:5|max:50',
-            'Password' => 'required|min:5|max:10',
+        UserdataModel::create([
+            'email' => $request->email,
+            'username' => $request->username,
+            'password' => $request->password,
         ]);
 
-        $data = [
-            'email' => Request()->email,
-            'username' => Request()->username,
-            'password' => Request()->password,
-        ];
-
-        $this->UserdataModel->createdata($data);
-        return redirect()->route('userdata')->with('pesan','Data Berhasil Di Tambahkan');
+        return redirect('userdata');
     }
 
     public function delete($id_pengguna)

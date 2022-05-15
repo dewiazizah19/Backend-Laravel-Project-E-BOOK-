@@ -13,4 +13,10 @@ class TransaksiModel extends Model
         return DB::table('tabel_transaksi')->get();
     }
 
+    public function deletedata ($id_transaksi)
+    {
+        DB::table('tabel_transaksi')
+            ->where('id_transaksi', $id_transaksi)
+            ->delete();
+    }
 }

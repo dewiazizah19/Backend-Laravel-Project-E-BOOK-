@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\DB;
 
 class UserdataModel extends Model
 {
+    use HasFactory;
+
+    protected $table = 'tabel_login';
+    protected $primaryKey = 'id_pengguna';
+    protected $fillable = ['email', 'username', 'password'];
+
     public function allData()
     {
         return DB::table('tabel_login')->get();

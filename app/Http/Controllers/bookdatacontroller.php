@@ -24,4 +24,9 @@ class bookdatacontroller extends Controller
         return view('bookdata', $bookdata);
     }
 
+    public function delete($id_buku)
+    {
+        $this->BookdataModel->deletedata($id_buku);
+        return redirect()->route('bookdata')->with('pesan','Data Berhasil Di Hapus');
+    }
 }
