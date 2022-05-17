@@ -10,6 +10,7 @@ class UserdataModel extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
     protected $table = 'tabel_login';
     protected $primaryKey = 'id_pengguna';
     protected $fillable = ['email', 'username', 'password'];
@@ -17,6 +18,11 @@ class UserdataModel extends Model
     public function allData()
     {
         return DB::table('tabel_login')->get();
+    }
+
+    public function detailData($id_pengguna)
+    {
+        return DB::table('tabel_login')->where('id_pengguna', $id_pengguna)->first();
     }
 
     public function createdata ($data)
@@ -29,5 +35,12 @@ class UserdataModel extends Model
         DB::table('tabel_login')
             ->where('id_pengguna', $id_pengguna)
             ->delete();
+    }
+
+    public function editData ($id_pengguna, $data)
+    {
+        DB::table('tabel_login')
+        ->where('id_pengguna', $id_pengguna)
+        ->update($data);
     }
 }

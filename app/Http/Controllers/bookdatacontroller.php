@@ -24,6 +24,18 @@ class bookdatacontroller extends Controller
         return view('bookdata', $bookdata);
     }
 
+    public function detail($id_buku)
+    {
+        if (!$this->BookdataModel->detailData($id_buku)) {
+            abort(404);
+        }
+
+        $bd = [
+            'bookdata'=>$this->BookdataModel->detailData($id_buku),
+        ];
+        return view('detail_bookdata', $bd);
+    }
+
     public function delete($id_buku)
     {
         $this->BookdataModel->deletedata($id_buku);

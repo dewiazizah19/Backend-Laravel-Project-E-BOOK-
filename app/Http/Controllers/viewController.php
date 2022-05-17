@@ -30,4 +30,16 @@ class viewController extends Controller
     public function input_userdata(){
         return view('input_userdata');
     }
+
+    public function detail_userdata(){
+        return view('detail_userdata');
+    }
+
+    public function edit_userdata(){
+        return view('edit_userdata');
+    }
+
+    public function detail_bookdata(){
+        return view('detail_bookdata');
+    }
 }

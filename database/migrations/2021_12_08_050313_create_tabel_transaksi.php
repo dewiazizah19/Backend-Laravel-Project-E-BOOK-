@@ -14,12 +14,13 @@ class CreateTabelTransaksi extends Migration
     public function up()
     {
         Schema::create('tabel_transaksi', function (Blueprint $table) {
-            $table->integer('no_transaksi');
+            $table->integer('idtransaksi');
             $table->integer('id_buku');
             $table->string('judul' ,100);
             $table->integer('harga');
-            $table->integer('sub_total');
-            $table->primary('no_transaksi');
+            $table->integer('total');
+            $table->timestamps('waktu_transaksi');
+            $table->primary('id_transaksi');
             $table->foreign('id_buku')->references('id_buku')->on('tabel_buku');
         });
     }

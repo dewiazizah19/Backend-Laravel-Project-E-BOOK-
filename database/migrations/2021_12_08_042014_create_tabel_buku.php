@@ -15,14 +15,13 @@ class CreateTabelBuku extends Migration
     {
         Schema::create('tabel_buku', function (Blueprint $table) {
             $table->integer('id_buku');
-            $table->integer('id_genre');
             $table->string('judul' ,100);
-            $table->string('nama_pengarang' ,100);
-            $table->string('nama_penerbit' ,100);
+            $table->string('genre' ,100);
+            $table->string('pengarang' ,100);
+            $table->string('penerbit' ,100);
+            $table->string('cover' ,100);
             $table->integer('harga');
             $table->primary('Id_buku');
-            $table->foreign('nama_pengarang')->references('nama_pengarang')->on('tabel_pengarang');
-            $table->foreign('nama_penerbit')->references('nama_penerbit')->on('tabel_penerbit');
         });
     }
 

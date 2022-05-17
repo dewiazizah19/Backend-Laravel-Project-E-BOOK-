@@ -9,7 +9,7 @@
     </h1>
 
     <h1>
-       <a href="input_userdata.html" class="btn btn-lg btn-info">Create</a>
+       <a href="input_userdata" class="btn btn-lg btn-info">Create</a>
     </h1>
 
     <ol class="breadcrumb">
@@ -49,7 +49,8 @@
                 <td>{{ $data->username }}</td>
                 <td>{{ $data->password }}</td>
                 <td>
-                  <a href="" class="btn btn-sm btn-warning">Edit</a>
+                  <a href="/userdata/detail/{{$data->id_pengguna}}" class="btn btn-sm btn-info">Detail</a>
+                  <a href="/userdata/edit/{{$data->id_pengguna}}" class="btn btn-sm btn-warning">Edit</a>
                   <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete{{ $data->id_pengguna }}">
                     Delete
                   </button>

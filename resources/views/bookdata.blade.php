@@ -7,11 +7,24 @@
       Book Data
       <small>Data Buku</small>
     </h1>
+
+    <h1>
+      <a href="input_bookdata" class="btn btn-lg btn-info">Create</a>
+   </h1>
+
     <ol class="breadcrumb">
       <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
       <li><a href="#">Master Data</a></li>
         <li class="active">Book Data</li>
       </ol>
+
+      @if (session('pesan'))
+      <div class="alert alert-success alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-check"></i> Success!</h4>
+        {{ session('pesan') }}.
+      </div>
+      @endif
     </section>
 <!-- Main content -->
 <section class="content">
@@ -41,7 +54,8 @@
               <td><img src="{{ url('cover_buku/'.$bd->cover) }}"width="100px"></td>
               <td>{{ $bd->harga }}</td>
               <td>
-                <a href="" class="btn btn-sm btn-warning">Edit</a>
+                <a href="/bookdata/detail/{{$bd->id_buku}}" class="btn btn-sm btn-info">Detail</a>
+                <a href="/bookdata/edit/{{$bd->id_buku}}" class="btn btn-sm btn-warning">Edit</a>
                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete{{ $bd->id_buku }}">
                   Delete
                 </button>
@@ -51,7 +65,7 @@
       </tbody>
   </table>
 
-  @foreach ($bookdata as $bd)
+@foreach ($bookdata as $bd)
   <div class="modal modal-danger fade" id="delete{{ $bd->id_buku }}">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -68,6 +82,6 @@
           <a href="/bookdata/delete/{{ $bd->id_buku }}" class="btn btn-outline">Yes</a>
         </div>
       </div>
-  @endforeach
+@endforeach
 <!-- ./row -->
 @endsection

@@ -17,7 +17,7 @@
 <section class="content">
   <form action="/input_userdata/insert" method="POST" >
     @csrf
-
+    @method('POST')
     <div class="content">
       <div class="row">
           <div class="col-sm-6">

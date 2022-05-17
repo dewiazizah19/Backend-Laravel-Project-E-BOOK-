@@ -21,14 +21,39 @@ Route::get('/', [viewcontroller::class, 'index']);
 
 Route::get('/dashboard', [viewcontroller::class, 'dashboard']);
 
-Route::get('/transaksi', [transaksicontroller::class, 'transaksi']);
+Route::get('/input_userdata', [viewcontroller::class, 'input_userdata']);
+
+Route::get('/detail_userdata', [viewcontroller::class, 'detail_userdata']);
+
+Route::get('/edit_userdata', [viewcontroller::class, 'edit_userdata']); 
+
+Route::get('/detail_bookdata', [viewcontroller::class, 'detail_bookdata']);
+
 
 Route::get('/userdata', [userdatacontroller::class, 'userdata'])->name('userdata');
 
+Route::POST('/input_userdata/insert', [userdatacontroller::class, 'insert'])->name('insert');
+
+Route::get('/userdata/delete/{id_pengguna}', [userdatacontroller::class, 'delete']);
+
+Route::get('/userdata/detail/{id_pengguna}', [userdatacontroller::class, 'detail']);
+
+Route::get('/userdata/edit/{id_pengguna}', [userdatacontroller::class, 'edit']);
+
+Route::POST('/userdata/update/{id_pengguna}', [userdatacontroller::class, 'update'])->name('update');
+
+
 Route::get('/bookdata', [bookdatacontroller::class, 'bookdata']);
 
-Route::get('/input_userdata', [viewcontroller::class, 'input_userdata']);
+Route::POST('/input_bookdata/insert', [bookdatacontroller::class, 'insert'])->name('insert');
 
-Route::get('/input_userdata/insert', [userdatacontroller::class, 'insert'])->name('insert');
+Route::get('/bookdata/delete/{id_buku}', [bookdatacontroller::class, 'delete']);
 
-Route::get('/userdata/delete/{id_pengguna}', [viewcontroller::class, 'delete']);
+Route::get('/bookdata/detail/{id_buku}', [bookdatacontroller::class, 'detail']);
+
+Route::get('/bookdata/edit/{id_buku}', [bookdatacontroller::class, 'edit']);
+
+Route::POST('/bookdata/update/{id_buku}', [bookdatacontroller::class, 'update'])->name('update');
+
+
+Route::get('/transaksi', [transaksicontroller::class, 'transaksi']);
